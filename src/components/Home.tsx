@@ -1,14 +1,31 @@
-export default function Header() {
-    return <div className="relative bg-[url('./images/background.png')] bg-cover bg-center h-screen">
-                <div className="absolute inset-0 bg-white/30 backdrop-blur-sm flex">
-                </div>
-                <div className="absolute inset-0 flex flex-col justify-center items-center">
-                    <p className="text-fuchsia-900 mb-4 text-center mb-15 text-4xl w-1/2">
-                        Enter in the products in your skincare routine and see if any two
-                        shouldn't go together.
-                    </p>
-                    <button className="bg-white text-fuchsia-900">Get your results now!</button>
-                </div>
+import { useState } from "react";
+import Popup from "./Popup";
 
+export default function Home() {
+    const [showPopup, setShowPopup] = useState(false);
+
+    const onOpen = () => {
+        setShowPopup(true);
+    }
+
+    const onClose = () => {
+        setShowPopup(false);
+    }
+
+    return (
+    <div className="relative bg-[url('./media/background.png')] bg-cover bg-center h-screen">
+        <div className="absolute inset-0 bg-white/30 backdrop-blur-sm flex"></div>
+        
+        <div className="absolute inset-0 flex flex-col justify-center items-center">
+                <p className="text-fuchsia-900 mb-4 text-center mb-15 text-4xl w-1/2">
+                    Drop your routine. <br></br>We'll spot any bad mixes.
+                </p>
+                <button  onClick={onOpen} className="rounded-lg bg-white text-fuchsia-900 px-7 py-3">
+                    Get your results now!
+                </button>
         </div>
+
+        {showPopup && <Popup onClose={onClose}/>}
+    </div>
+    );
 }
