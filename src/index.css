@@ -41,6 +41,7 @@ button {
 
 button:hover {
   border-color: #593756;
+  filter: brightness(90%);
 }
 
 @media (prefers-color-scheme: light) {

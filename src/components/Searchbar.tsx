@@ -1,14 +1,14 @@
 export default function Searchbar() {
   return (
-      <div className="mb-3 xl:w-96">
-          <div className="relative mb-4 flex w-full flex-wrap items-stretch">
+    <div className="mb-3 xl:w-96">
+          <div className="relative flex ml-10 w-full">
               <input
-                  type="search"
-                  className="relative block flex-auto text-indigo-300 border-indigo-200 border-b-1 bg-transparent leading-[1.6] outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none"
-                  placeholder="Search" />
+                    type="search"
+                    className="relative m-0 block flex-auto border-b border-fuchsia-400 border-solid bg-transparent bg-clip-padding px-3 text-base font-normal text-fuchsia-400 focus:outline-none"
+                    placeholder="Search product names" />
 
               <span
-                  className="input-group-text flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal text-indigo-200"
+                  className="input-group-text flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal text-fuchsia-400"
                   id="basic-addon2">
                   <svg
                       xmlns="http://www.w3.org/2000/svg"
